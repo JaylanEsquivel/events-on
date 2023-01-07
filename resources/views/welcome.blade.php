@@ -4,11 +4,43 @@
 
 @section('content')
 
+    <div class="row">
+        <div id="search-container" class="col-md-12">
+            <h1 class="text-center">Buscar um Evento</h1>
+            <form action="">
+                <input type="text" id="search" name="search" class="form-control" placeholder="procurar evento">
+            </form>
 
-    @foreach ($events as $item)
-        <h1>{{$item->title}}</h1>
-        <p>{{$item->description}} </p>
-    @endforeach
+        </div>
+    </div>
+    <div class="row">
+        <div id="events-container" class="col-md-12">
+            <h2>Proximos eventos</h2>
+            <p>Veja nossos eventos dos proximos dias.</p>
+            <div id="card-container" class="row">
+
+                @foreach ($events as $event)
+
+                <div class="card col-md-3">
+                    <img src="/dist/img/one.png" alt="{{$event->date}}">
+
+                    <div class="card-body">
+                        <div class="card-date">2023</div>
+                        <div class="card-title">{{$event->title}}</div>
+                        <p class="card-participantes">X participantes</p>
+                        <a href="http://" class="btn btn-primary">Saber mais...</a>
+                    </div>
+
+
+                </div>
+
+                @endforeach
+
+            </div>
+
+        </div>
+    </div>
+
 
 @endsection
 

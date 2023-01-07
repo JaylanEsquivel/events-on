@@ -3,3 +3,66 @@
     font-family: 'Roboto';
 }
 
+body{
+    min-height: 100vh;
+    position: relative;
+}
+
+
+header{
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.row{
+    margin: 0px;
+}
+
+/* navbar */
+
+#navbar{
+    background-color: #fff;
+}
+
+/* Search */
+
+#search-container{
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+#search-container h1{
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#events-container{
+    padding-top: 30px;
+}
+#card-container{
+    display: flex;
+    margin-bottom: 20px;
+}
+#card-container .card{
+    flex: 1 1 0;
+    padding: 0;
+    max-width: 25%;
+    margin: 5px;
+}
+
+footer{
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+    bottom: 0;
+}
+
+#crete-events{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
