@@ -14,6 +14,11 @@ header{
     background-color: #fff;
 }
 
+.main-container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .row{
     margin: 0px;
 }
@@ -48,10 +53,10 @@ header{
     margin-bottom: 20px;
 }
 #card-container .card{
-    flex: 1 1 0;
+    flex: 1 1 24%;
     padding: 0;
     max-width: 25%;
-    margin: 5px;
+    margin: .5%;
 }
 
 footer{

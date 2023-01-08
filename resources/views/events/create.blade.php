@@ -8,8 +8,12 @@
 
     <div id="crete-events" class="col-md-6 offset-md-3">
         <h1>Crie o seu evento</h1>
-        <form action="/events" method="post">
+        <form action="/events" method="post" enctype="multipart/form-data">
             @csrf
+            <div class="mb-3">
+                <label for="image">Imagendo Evento</label>
+                <input type="file" name="image" id="image" class="form-control-file">
+            </div>
             <div class="mb-3">
                 <label for="title">Evento</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="Evento">

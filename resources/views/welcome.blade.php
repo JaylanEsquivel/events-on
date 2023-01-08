@@ -22,13 +22,14 @@
                 @foreach ($events as $event)
 
                 <div class="card col-md-3">
-                    <img src="/dist/img/one.png" alt="{{$event->date}}">
+
+                    <img @if($event->image) src="/dist/img/events/{{$event->image}}" @else src="/dist/img/one.png" @endif alt="{{$event->date}}">
 
                     <div class="card-body">
                         <div class="card-date">2023</div>
                         <div class="card-title">{{$event->title}}</div>
                         <p class="card-participantes">X participantes</p>
-                        <a href="http://" class="btn btn-primary">Saber mais...</a>
+                        <a href="/event/{{$event->id}}" class="btn btn-primary">Saber mais...</a>
                     </div>
 
 

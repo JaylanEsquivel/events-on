@@ -45,7 +45,20 @@
         </header>
 
         <main>
-            <div class="container">
+            <div class="container main-container" >
+                    <div class="row">
+                        <div class="col-md-12 " >
+
+                            @if(session('msg'))
+
+                             <div class="alert alert-success" role="alert">
+                                {{session('msg')}}
+                              </div>
+
+                            @endif
+
+                        </div>
+                    </div>
 
                     @yield('content')
 
