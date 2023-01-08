@@ -17,6 +17,7 @@ header{
 .main-container{
     padding-top: 30px;
     padding-bottom: 30px;
+    min-height: 450px;
 }
 
 .row{
@@ -74,4 +75,8 @@ footer{
 
 #items{
     list-style: none;
+}
+
+.btn-info{
+    color: #fff;
 }

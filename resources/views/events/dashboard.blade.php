@@ -19,6 +19,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">Imagen</th>
                                 <th scope="col">Data</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">Participantes</th>
@@ -29,12 +30,20 @@
                             @foreach ($events as $item)
                                 <tr>
                                     <th scope="row">{{ $loop->index + 1 }}</th>
+                                    <th scope="row">
+                                        <img src="/dist/img/events/{{$item->image}}" alt="{{$item->title}}" class="img-fluid" width="100">
+                                    </th>
                                     <th scope="row">{{date('d/m/Y', strtotime($item->date))}}</th>
                                     <th scope="row"><a href="/event/{{$item->id}}" target="_blank">{{ $item->title }}</a></th>
                                     <th scope="row">0</th>
                                     <th scope="row">
-                                        <a href="" class="btn btn-info">Editar</a>
-                                        <a href="" class="btn btn-danger">Deletar</a>
+                                        <a href="/events/edit/{{$item->id}}" class="btn btn-info">Editar</a>
+
+                                        <form action="/events/{{$item->id}}" method="post" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Deletar</button>
+                                        </form>
                                     </th>
                                 </tr>
                             @endforeach
