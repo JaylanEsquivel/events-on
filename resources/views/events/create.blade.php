@@ -18,6 +18,15 @@
                 <label for="title">Evento</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="Evento">
             </div>
+
+            <div class="mb-3">
+                <label for="date">Data do Evento</label>
+                <input type="date" name="date" id="date" class="form-control" >
+            </div>
+
+
+
+
             <div class="mb-3">
                 <label for="city">Cidade</label>
                 <input type="text" name="city" id="city" class="form-control" placeholder="cidade">
