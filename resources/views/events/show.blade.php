@@ -21,7 +21,7 @@
                     <p class="event-city"> <ion-icon name="location-outline"></ion-icon> {{$event->city}}</p>
 
                     <p class="event-participants"><ion-icon name="people-outline"></ion-icon> X-participantes</p>
-                    <p class="event-owner"><ion-icon name="star-outline"></ion-icon> Dono do Evento</p>
+                    <p class="event-owner"><ion-icon name="star-outline"></ion-icon> {{$eventOwner['name']}}</p>
                     <a href="#" class="btn btn-primary" id="event-submit">Confirmar Presença</a>
                     <h3>O Evento conta com:</h3>
 

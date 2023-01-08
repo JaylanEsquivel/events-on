@@ -15,4 +15,8 @@ class Event extends Model
 
     protected $date = ['date'];
 
+    public function user(){
+        return $this->belongsTo(User::class); // O EVENTO PERTENCE A UM USUARIO
+    }
+
 }
