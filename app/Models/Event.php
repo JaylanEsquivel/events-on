@@ -22,7 +22,7 @@ class Event extends Model
     }
 
     public function users(){
-        return $this->belongsToMany(User::class); // PERTENCE A MUITOS
+        return $this->belongsToMany(User::class)->withTimestamps(); // PERTENCE A MUITOS
     }
 
 }
